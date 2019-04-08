@@ -1,0 +1,27 @@
+version: '3'
+
+services : 
+    debian:
+      container_name: DEBIAN
+      build: docker/debian
+      labels:
+        name: amd64/debian
+      ports:
+        - "8888:8888"
+      volumes:
+        - ./../../../default/src/:/home/Ctransfert
+      stdin_open: true
+      networks:
+        vpcbr:
+          ipv4_address: 10.5.0.6
+    
+networks:
+  vpcbr:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 10.5.0.0/16
+#        - gateway: 10.5.0.1
+    
+    
