@@ -8,6 +8,8 @@ services :
         name: amd64/debian
       ports:
         - "8888:8888"
+        - "2121:2121"
+        - "2222:2222"
       volumes:
         - ./../../../default/src/:/home/Ctransfert
       stdin_open: true

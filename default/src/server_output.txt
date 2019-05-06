@@ -1,0 +1,8 @@
+client
+client.c
+folder_client
+folder_server
+other
+server
+server.c
+server_output.txt
